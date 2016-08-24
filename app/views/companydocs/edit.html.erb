@@ -1,6 +1,5 @@
-<h1>Editing companydoc</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @companydoc %> |
-<%= link_to 'Back', companydocs_path %>
+<%- model_class = Companydoc -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Companydoc %></h1>
+</div>
+<%= render :partial => 'form' %>

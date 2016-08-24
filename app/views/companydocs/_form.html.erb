@@ -1,17 +1,10 @@
-<%= form_for(@companydoc) do |f| %>
-  <% if @companydoc.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@companydoc.errors.count, "error") %> prohibited this companydoc from being saved:</h2>
+<%= form_for @companydoc, :html => { :class => 'form-horizontal form-model' } do |f| %>
 
-      <ul>
-      <% @companydoc.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  companydocs_path, :class => 'btn btn-default' %>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
   </div>
 <% end %>
