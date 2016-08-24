@@ -1,0 +1,29 @@
+<h1>Listing companyforms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Attachment</th>
+      <th>Companydoc</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @companyforms.each do |companyform| %>
+      <tr>
+        <td><%= companyform.name %></td>
+        <td><%= companyform.attachment %></td>
+        <td><%= companyform.companydoc %></td>
+        <td><%= link_to 'Show', companyform %></td>
+        <td><%= link_to 'Edit', edit_companyform_path(companyform) %></td>
+        <td><%= link_to 'Destroy', companyform, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Companyform', new_companyform_path %>

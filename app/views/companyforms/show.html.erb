@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @companyform.name %>
+</p>
+
+<p>
+  <strong>Attachment:</strong>
+  <%= @companyform.attachment %>
+</p>
+
+<p>
+  <strong>Companydoc:</strong>
+  <%= @companyform.companydoc %>
+</p>
+
+<%= link_to 'Edit', edit_companyform_path(@companyform) %> |
+<%= link_to 'Back', companyforms_path %>

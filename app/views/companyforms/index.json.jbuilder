@@ -1,0 +1,1 @@
+json.array! @companyforms, partial: 'companyforms/companyform', as: :companyform

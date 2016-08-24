@@ -1,0 +1,1 @@
+json.partial! "companyforms/companyform", companyform: @companyform
