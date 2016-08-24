@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :usermanuals
+
   resources :tasks
 
   resources :companydocs

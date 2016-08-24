@@ -1,0 +1,2 @@
+module UsermanualsHelper
+end

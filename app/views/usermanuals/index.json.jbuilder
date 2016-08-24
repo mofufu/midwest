@@ -1,0 +1,1 @@
+json.array! @usermanuals, partial: 'usermanuals/usermanual', as: :usermanual

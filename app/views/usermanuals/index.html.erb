@@ -1,0 +1,29 @@
+<h1>Listing usermanuals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Document name</th>
+      <th>Document type</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @usermanuals.each do |usermanual| %>
+      <tr>
+        <td><%= usermanual.document_name %></td>
+        <td><%= usermanual.document_type %></td>
+        <td><%= usermanual.user %></td>
+        <td><%= link_to 'Show', usermanual %></td>
+        <td><%= link_to 'Edit', edit_usermanual_path(usermanual) %></td>
+        <td><%= link_to 'Destroy', usermanual, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Usermanual', new_usermanual_path %>

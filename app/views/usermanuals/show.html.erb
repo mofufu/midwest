@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Document name:</strong>
+  <%= @usermanual.document_name %>
+</p>
+
+<p>
+  <strong>Document type:</strong>
+  <%= @usermanual.document_type %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @usermanual.user %>
+</p>
+
+<%= link_to 'Edit', edit_usermanual_path(@usermanual) %> |
+<%= link_to 'Back', usermanuals_path %>
