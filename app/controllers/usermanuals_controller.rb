@@ -29,6 +29,7 @@ class UsermanualsController < ApplicationController
   # POST /usermanuals.json
   def create
     @usermanual = Usermanual.new(usermanual_params)
+    @usermanual.user = current_user
 
     respond_to do |format|
       if @usermanual.save
