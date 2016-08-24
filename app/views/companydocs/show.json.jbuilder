@@ -1,0 +1,1 @@
+json.partial! "companydocs/companydoc", companydoc: @companydoc

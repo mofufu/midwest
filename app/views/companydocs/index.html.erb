@@ -1,0 +1,23 @@
+<h1>Listing companydocs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @companydocs.each do |companydoc| %>
+      <tr>
+        <td><%= link_to 'Show', companydoc %></td>
+        <td><%= link_to 'Edit', edit_companydoc_path(companydoc) %></td>
+        <td><%= link_to 'Destroy', companydoc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Companydoc', new_companydoc_path %>
